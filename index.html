@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<h1>Character Counter (including whitespace)</h1>
+		<div class="row">
+			
+			<textarea placeholder="Write to calculate...." onkeyup="countLetter()"></textarea>
+		</div>
+		<div class="count">
+			<p>Characters:<span id="c"></span></p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let textarea = document.querySelector('textarea');
+		let count = document.querySelector('#c');
+		function countLetter() {
+			// body...
+			const text = textarea.value;
+			const textLength = text.length;
+			count.innerText = textLength;
+		}
+	</script>
+</body>
+</html>
